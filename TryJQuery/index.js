@@ -1,7 +1,7 @@
 
-$("document").ready(function(){
-  // alert("fir"); 
+$(document).ready(function(){
    $("h1").text("text changed");
+   alert("fir"); 
 })
 
 
