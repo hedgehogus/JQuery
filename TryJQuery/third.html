@@ -2,28 +2,32 @@
 <html>
     <head>        
         <meta charset="UTF-8">
-        <!-- <link rel="stylesheet" href="first.css">  -->
+        <link rel="stylesheet" href="third.css"> 
         <title>JQuery Adventures2</title>
     </head>
 
     <body>
+        <div id="filters">
+            <button class="onsale-filter">On sale now</button>
+            <button class="expiring-filter">Expiring</button>
+        </div>
         <ul>
-            <li class="vacation">   
-                <h2>Name of vacation</h2>    
+            <li class="vacation onsale" data-price="399.99">   
+                <h2>First vacation</h2>    
                 <div> 
                     <button>Get price</button>
                 </div>
             </li>
 
-            <li class="vacation">   
-                <h2>Name of vacation</h2>  
+            <li class="vacation onsale expiring" data-price="299.99">   
+                <h2>Second vacation</h2>  
                 <div>   
                     <button>Get price</button>
                 </div>
             </li>
 
-            <li class="vacation">   
-                <h2>Name of vacation</h2>    
+            <li class="vacation" data-price="199.99">   
+                <h2>Third vacation</h2>    
                 <div>
                     <button>Get price</button>
                 </div>
