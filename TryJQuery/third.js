@@ -15,8 +15,24 @@ $(document).ready(function(){
         price.css("background-color", "#ddd");
         price.css("text-align", "center");
         
-        $(".vacation").append(price);
-        $("button").remove();
+        // $(this).after(price);
+        // $(this).parent().parent().append(price);
+        // $(this).parents('.vacation').append(price); // all ancestors nodes
+        $(this).closest('.vacation').append(price); //one node
+        $(this).remove();
+    });
+
+    //or
+    
+    $("li").on("click", function(){
+        var price =$('<p>From $399.99</p>');
+
+        price.css("width", "200px");
+        price.css("background-color", "#ddd");
+        price.css("text-align", "center");        
+        
+        $(this).append(price); 
+        $(this).find("button").remove(); //find child
     });
 
    
