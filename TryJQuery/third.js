@@ -21,7 +21,7 @@ $(document).ready(function(){
         // $(this).parent().parent().append(price);
         // $(this).parents('.vacation').append(price); // all ancestors nodes
         vacation.append(price); //one node
-        $(this).remove();
+        $(this).closest("div").remove();
     });
 
     //or
