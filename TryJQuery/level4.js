@@ -26,6 +26,37 @@ $(document).ready(function(){
    // mousenter
    // mouseleave
    // mouseover
+
+
+   //Keyboard and Form events
+
+    let price = +$('.vacation').data("price"); // + converts to a number
+    $('.vacation').on("keyup", ".quantity",function(){
+        // get the price of this vacation
+        // get the quantity entered
+        // set the total to price * quantity
+
+        let q = +$(this).val();
+        $("#total").text((q*price).toFixed(2));
+        console.log(parseFloat((q*price).toFixed(2)));
+        
+    });
+    console.log(price);
+    
+    // KEYBOARD EVENTS
+    // - keypress
+    // - keydown
+    // - keyup
+
+    // FORM EVENTS
+    // - blur;
+    // - focus;
+    // - select;
+    // - submit;
+    // - change;
+    
+    // .val(<new value>) - set value
+    // .val() - get value
  
 });
 
