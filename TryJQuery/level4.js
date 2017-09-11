@@ -8,13 +8,11 @@ $(document).ready(function(){
     console.log($('li').length); // to query how many nodes are on a page
    // console.log($('ul').length);
    // console.log($('button').length);
+   
 
-    $(".hover").on("mouseenter","h1",function(){
-       $(this).closest(".hover").find("section").slideDown();
-    });
-    $(".hover").on("mouseleave","h1",function(){
-       $(this).closest(".hover").find("section").slideUp();
-    });  
+    $(".hover").on("mouseenter","h1", showInformation);
+    $(".hover").on("mouseout","h1", hideInformation);  
+
 
    // mouse events
    // click
@@ -30,3 +28,11 @@ $(document).ready(function(){
    // mouseover
  
 });
+
+function showInformation() {
+         $(this).closest(".hover").find("section").slideDown();
+    }
+
+function hideInformation(){
+        $(this).closest(".hover").find("section").slideUp();
+    }
