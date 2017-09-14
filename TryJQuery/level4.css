@@ -12,3 +12,7 @@
 .listener {
     display: inline-block;
 }
+
+.comments {
+    display:none;
+}

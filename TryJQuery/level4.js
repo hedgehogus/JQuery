@@ -46,7 +46,8 @@ $(document).ready(function(){
     // .val() - get value
 
     let price = +$('.vacation').data("price"); // + converts to a number
-    $('.vacation').on("keyup", ".quantity",function(){
+    console.log(price);
+    $('.vacation').on("change", ".quantity",function(){
         // get the price of this vacation
         // get the quantity entered
         // set the total to price * quantity
@@ -56,7 +57,7 @@ $(document).ready(function(){
         console.log(parseFloat((q*price).toFixed(2)));
         
     });
-    console.log(price);
+  
  
 });
 
