@@ -57,7 +57,18 @@ $(document).ready(function(){
         console.log(parseFloat((q*price).toFixed(2)));
         
     });
-  
+    
+    $('.vacation').on("click",".expand", function(event){
+        //find the comments ul
+        //show the comments ul
+
+        //event.stopPropagation(); // stop the other event handler from being called
+        event.preventDefault();
+        $(this).closest(".vacation").find(".comments").fadeToggle();
+        // fadeIn();
+        // fadeOut();
+        // fadeToggle();
+    });
  
 });
 

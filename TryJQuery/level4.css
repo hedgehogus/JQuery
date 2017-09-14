@@ -2,6 +2,11 @@
     display: none;
 }
 
+.confirmation {
+    height:1000px;
+    width: 200px;
+    background: #444;
+}
 .hover section{
     display: none;
     border: 2px  solid lightcoral;
@@ -15,4 +20,10 @@
 
 .comments {
     display:none;
+}
+
+.vacation {    
+    display:inline-block;
+    width: 400px;
+    vertical-align: top;
 }
