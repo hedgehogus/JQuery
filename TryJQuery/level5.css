@@ -1,0 +1,22 @@
+.vacation {
+    display: inline-block;
+    border: 2px solid lightgrey;
+    margin-right: 30px;
+    width: 200px;
+    text-align: center;
+    height: 130px; 
+    vertical-align: top;
+}
+
+.price {
+    display:none;
+}
+
+.highligted {
+    background-color: #778899;
+    border-color: #333333;
+}
+
+.highligted .price{
+    display: block;
+}
