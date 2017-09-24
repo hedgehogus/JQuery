@@ -10,3 +10,7 @@
 .ticket img{
     display: none;
 } 
+
+.confirmation{
+    display: inline-block;
+}

@@ -1,0 +1,18 @@
+.ticket a{
+    vertical-align: top;
+}
+
+.ticket {
+    margin: 15px;
+    display: none; 
+}
+
+.ticket img{
+    display: none;
+} 
+
+.confirmation{
+    vertical-align: top;
+    width: 400px;
+    display: inline-block;
+}
