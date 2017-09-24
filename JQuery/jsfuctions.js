@@ -34,3 +34,5 @@ $(document).ready(function(){
     var london = new Confirmation($("#london"));
     
 })
+
+// ajax context parameter set what is this for other functions
