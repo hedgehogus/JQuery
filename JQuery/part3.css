@@ -1,0 +1,13 @@
+form {
+    width: 800px;    
+}
+
+.row {
+    display:block;    
+}
+
+.row label, input{
+    display: inline-block;
+    width: 200px;
+}
+

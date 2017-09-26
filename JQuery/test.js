@@ -36,7 +36,9 @@ function FetchInfo(el){
         
         xhr.onload = function() {
             var responseText = xhr.responseText;
-            console.log(responseText);            
+            console.log(responseText);    
+            inst.el.find("p").text(responseText).slideDown();
+                console.log(response);        
         };
         xhr.onerror = function(){
             console.log("error");
