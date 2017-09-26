@@ -1,0 +1,18 @@
+ul {
+    list-style-type: none;
+}
+ul li{
+    display:inline-block;
+    width: 400px;
+    vertical-align: top;
+}
+
+.fetch-image img {
+    display:none;
+    width: 300px;
+    height: 300px;
+}
+button {
+    display:block;
+    margin: 10px;
+}
