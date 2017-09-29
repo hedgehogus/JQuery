@@ -66,7 +66,39 @@ $(".update-status").on("click", function(){
             $('<p>' + status.status + '</p>').appendTo(listItem);
             return listItem;
         });
-        
-        $('.status-list').html(statusElements);
+
+        // .detach() removes an element from the DOM, preserving all data and events
+        // this is useful to minimize DOM insertions with multiple html elements
+
+        $('.status-list').detach()
+                .html(statusElements)
+                .appendTo(".status");
     });
 });
+
+// $.each vs $.map
+
+var cities = ['paris', 'london', 'orlando'];
+
+// $.each runs the function for each item in the array, but returns the original array unchanged
+
+$.each(cities, function(index,city){
+    var result = city + index;
+    console.log(result);
+});
+
+// paris 0
+// london 1
+// orlando 2
+// ["paris", "london", "orlando"]
+
+$.map(cities, function(city, index){
+    var result = city + " " + index;
+    console.log(result);
+    return result;
+});
+
+// paris 0
+// london 1
+// orlando 2
+// ["paris 0", "london 1", "orlando 2"]
