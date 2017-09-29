@@ -36,7 +36,7 @@ $("button").on("click", function(){
 // $.getJSON(url, success)
 
 $(".update-status").on("click", function(){
-    $.getJson("/status", function (result){
+    $.getJSON("/status", function (result){
 
         result = [
             {
