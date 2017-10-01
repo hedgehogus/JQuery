@@ -60,5 +60,23 @@ $(document).ready(function(){
         event.preventDefault();
         //$('.vacation:last').trigger('show.price');
         $('.vacation').trigger('show.price');
-    })
+    });
+
+    $('.vacation').priceify();
 })
+
+
+// SETTING UP A PLUGIN
+
+// $.fn - Makes the priceify method available
+// priceify - name of our plugin
+$.fn.priceify = function(){
+    console.log("pricify called");
+    // this will be $('.vacation')
+    var vacation = this;
+
+    vacation.on('click.pricefy', 'button', function(){
+        var price = vacation.data('price');
+        var details = $('<p>Book 3 days for $' + (3*price) + '</p>');
+    })
+};
