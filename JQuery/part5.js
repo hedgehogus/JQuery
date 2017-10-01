@@ -26,16 +26,16 @@ function showPrice(){
 $.fn.priceify = function(){
     console.log("pricify called");
     // this will be $('.vacation')
-    
+   // debugger;
     this.each(function(){
-        let vacation = this;
+        var vacation = $(this);
         console.log(vacation);
         vacation.on('click', 'button', function(){
             var price = vacation.data('price');
             console.log(price);
-    //         var details = $('<p>Book 3 days for $' + (3*price) + '</p>');
-    //         $(this).hide();
-    //         vacation.append(details);
+            var details = $('<p>Book 3 days for $' + (3*price) + '</p>');
+            $(this).hide();
+            vacation.append(details);
        });
     });
 };
