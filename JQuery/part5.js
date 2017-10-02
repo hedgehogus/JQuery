@@ -23,21 +23,42 @@ function showPrice(){
 
 // $.fn - Makes the priceify method available
 // priceify - name of our plugin
-$.fn.priceify = function(){
+$.fn.priceify = function(options ){
+   
     console.log("pricify called");
     // this will be $('.vacation')
-   // debugger;
+   
     this.each(function(){
-        var vacation = $(this);
-        console.log(vacation);
-        vacation.on('click', 'button', function(){
-            var price = vacation.data('price');
-            console.log(price);
-            var details = $('<p>Book 3 days for $' + (3*price) + '</p>');
+        // $.extend function for combining objects
+        var settings = $.extend({days:3,
+                    vacation:$(this),
+                    price: $(this).data('price')
+                }, options); 
+
+        var show = function(){            
+            var details = $('<p>Book '+ settings.days +' days for $' + (settings.days*settings.price) + '</p>');
             $(this).hide();
-            vacation.append(details);
-       });
+            settings.vacation.find('.remove-vacation').before(details);
+        };
+
+        settings.vacation.on('click.priceify', 'button', show);
+        settings.vacation.on('show.priceify','button', show);
+
+        var remove = function(){
+            settings.vacation.off('.priceify').hide();
+        };
+
+        settings.vacation.on("click.remove", ".remove-vacation", remove);
+
     });
+
+
+    $('.show-prices').on('click', function(event){
+        event.preventDefault();
+        $('.vacation button').trigger('click.priceify');
+        $(this).hide();
+    })
+
 };
 
 $(document).ready(function(){
