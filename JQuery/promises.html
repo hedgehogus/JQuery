@@ -7,27 +7,35 @@
     </head>
 
     <body>
-        <h1>Plugins</h1>
-        <div>   
-            <button class="button"> Boeing 777</button>
-            
+        <h1>Promises</h1>       
+
+        <div class='favorite'>
+            <h3> Favorite </h3>
+            <img src='paris.jpg'/>
+            <p class="loc">Paris, France</p>
+            <p class='weather'></p>
+            <button>Show Weather</button>
         </div>
 
-        <div>
-            <ul>
-                <li class="vacation" data-price='399'>
-                    <h3>Hawaiian Vacation</h3>
-                    <button>Show price</button>
-                    <a href='#' class='remove-vacation'>Not Interested</a>
-                </li>
-                <li class="vacation" data-price='749'>
-                    <h3>European vacation </h3>
-                    <button>Show price</button>
-                    <a href='#' class='remove-vacation'>Not Interested</a>
-                </li>                
-            </ul>
-            <a href='#' class="show-prices">Show all prices</a>
-        </div>
+        <ul class='favorites'>
+            <li data-loc='london,uk'>
+                London, UK
+                <button> More Info</button>
+                <div class="results"></div>
+            </li>
+
+            <li data-loc='paris,france'>
+                Paris, France
+                <button> More Info</button>
+                <div class="results"></div>
+            </li>
+
+            <li data-loc='madrid,spain'>
+                Madrid, Spain
+                <button> More Info</button>
+                <div class="results"></div>
+            </li>
+        </ul>
         
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>        
         <script src="promises.js" async ></script>        
