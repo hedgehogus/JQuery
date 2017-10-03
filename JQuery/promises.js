@@ -64,5 +64,30 @@ $(document).ready(function(){
     $('button').on('click', function(){
         var loc = $(this).parent().data('loc');
         var resultDiv = $(this).parent().find(".result").empty();
+
+        Weather.today(loc).done(function(weatherResult){
+            resultDiv.append(weatherResult);
+        })
+
+        City.find(loc).done(function(cityResult){
+            resultDiv.append(cityResult);
+        })
+
+        // Ajax responses finish at different times
+
+        // $.when() and then() to save the day
+
+        // this can't be an array, only promises separated by comas
+        // $.when(<promise1>,<promise2).then(function(p1Data, p2Data){});
+        // callback data is in the same order as the promises
+
+        $.when(
+            Weather.today(loc),
+            City.find(loc)            
+        ).then(function(weatherResult, cityResult){
+            resultDiv.append(cityResult);
+            resultDiv.append(weatherResult);
+            // data is all rendered at the same time
+        })
     });
 });
